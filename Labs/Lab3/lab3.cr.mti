@@ -1,0 +1,50 @@
+/home/modes.b/rcafunc.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/rcafunc.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RCAFunc
+-- Compiling architecture rca_func_arc of RCAFunc
+
+} {} {}} /home/modes.b/rca.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/rca.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RCA
+-- Compiling architecture rca_arc of RCA
+
+} {} {}} /home/modes.b/rcaprocedure.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/rcaprocedure.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RCAFuncProc
+-- Compiling architecture rca_func_proc_arc of RCAFuncProc
+
+} {} {}} /home/modes.b/fulladder.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/fulladder.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FullAdder
+-- Compiling architecture FA_IMPL of FullAdder
+
+} {} {}} /home/modes.b/testbench.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/testbench.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_rca
+-- Compiling architecture tb of tb_rca
+-- Loading entity RCAFuncProc
+
+} {} {}} /home/modes.b/rcafuncgen.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/rcafuncgen.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RCAFuncGen
+-- Compiling architecture rca_func_gen_arc of RCAFuncGen
+
+} {} {}}

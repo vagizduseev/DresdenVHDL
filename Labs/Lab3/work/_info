@@ -1,0 +1,488 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/modes.b
+Edata_types
+Z1 w1404220489
+Z2 d/home/modes.b
+Z3 8/home/modes.b/counter.vhd
+Z4 F/home/modes.b/counter.vhd
+l0
+L1
+VOVoZBnie3i[SAI^kNSU081
+Z5 OV;C;10.1d;51
+32
+Z6 !s108 1404220503.288398
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/counter.vhd|
+Z8 !s107 /home/modes.b/counter.vhd|
+Z9 o-work work -2002 -explicit -O0
+Z10 tExplicit 1
+!s100 YdK`8YC8;h3gDX>gPQ[4@3
+!i10b 1
+Adata1
+DEx4 work 10 data_types 0 22 OVoZBnie3i[SAI^kNSU081
+Z11 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z12 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z13 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+l14
+L8
+V>L=dY<1a[CzNjVINEKG241
+R5
+32
+R6
+R7
+R8
+R9
+R10
+!s100 2>We3fNf?8QnfFOdMa?8z3
+!i10b 1
+Efa
+Z14 w1404288767
+R12
+R13
+R2
+Z15 8/home/modes.b/problem2.vhd
+Z16 F/home/modes.b/problem2.vhd
+l0
+L4
+VF=8h;IoQk<=5jXEi7iYB70
+R5
+32
+Z17 !s108 1404288785.346876
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/problem2.vhd|
+Z19 !s107 /home/modes.b/problem2.vhd|
+R9
+R10
+!s100 T]44ch[;PUAgldHM[^2AM1
+!i10b 1
+Afa_1
+R12
+R13
+DEx4 work 2 fa 0 22 F=8h;IoQk<=5jXEi7iYB70
+l12
+L11
+V>B7lM;NMNL@EYPnId4=b72
+R5
+32
+R17
+R18
+R19
+R9
+R10
+!s100 M5ZV:[K_KMeV=7ZXB1_1X1
+!i10b 1
+Efulladder
+Z20 w1404290708
+R12
+R13
+R2
+Z21 8/home/modes.b/fulladder.vhd
+Z22 F/home/modes.b/fulladder.vhd
+l0
+L4
+V2JaczKdXl7@FobP<ilRkF3
+R5
+32
+Z23 !s108 1404377269.152642
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/fulladder.vhd|
+Z25 !s107 /home/modes.b/fulladder.vhd|
+R9
+R10
+!s100 6MfcnAfU:fOO]D`kaj13f2
+!i10b 1
+Afa_impl
+R12
+R13
+DEx4 work 9 fulladder 0 22 2JaczKdXl7@FobP<ilRkF3
+l12
+L11
+VdNJH3fEok81NZWNBAS?5D1
+R5
+32
+R23
+R24
+R25
+R9
+R10
+!s100 2ZRO=X0C]632lbKgPAF;M2
+!i10b 1
+Ehello
+Z26 w1404202090
+R2
+Z27 8/home/modes.b/helloworld.vhd
+Z28 F/home/modes.b/helloworld.vhd
+l0
+L1
+VKVD681V:gm14VeB?W=>4F1
+R5
+32
+Z29 !s108 1404202103.893865
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/helloworld.vhd|
+Z31 !s107 /home/modes.b/helloworld.vhd|
+R9
+R10
+!s100 l:?mkmESee<AB:CZmF[Bj2
+!i10b 1
+Ahello_1
+DEx4 work 5 hello 0 22 KVD681V:gm14VeB?W=>4F1
+l5
+L4
+V^:a5?M?l@HXSWI<Ic6h>_3
+R5
+32
+R29
+R30
+R31
+R9
+R10
+!s100 EKD9LM9hSMga;4fg5A6N:1
+!i10b 1
+Erca
+Z32 w1404374275
+R12
+R13
+R2
+Z33 8/home/modes.b/rca.vhd
+Z34 F/home/modes.b/rca.vhd
+l0
+L4
+V91ld@_PVei_i[I12RPkaK0
+R5
+32
+Z35 !s108 1404377269.286909
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/rca.vhd|
+Z37 !s107 /home/modes.b/rca.vhd|
+R9
+R10
+!s100 izG3N]G23:E48A_=BRLhg2
+!i10b 1
+Arca_arc
+R12
+R13
+Z38 DEx4 work 3 rca 0 22 91ld@_PVei_i[I12RPkaK0
+l27
+L16
+VJEneVlLgT59Md@g2lPek;0
+R5
+32
+R35
+R36
+R37
+R9
+R10
+!s100 CnWlg7:NUePAVVjSYYNoA2
+!i10b 1
+Arca
+R12
+R13
+R38
+l27
+L16
+V=A6HY?>h2<g6PCDm221MY1
+R5
+32
+R36
+R9
+R10
+w1404374123
+R37
+!s108 1404374253.969414
+!s100 l0=N89>227]0>I>TPBEb`2
+!i10b 1
+Ercafunc
+Z39 w1404374264
+R12
+R13
+R2
+Z40 8/home/modes.b/rcafunc.vhd
+Z41 F/home/modes.b/rcafunc.vhd
+l0
+L4
+VAlSffmVHcOWa_kD>>CXMK2
+R5
+32
+Z42 !s108 1404377269.351698
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/rcafunc.vhd|
+Z44 !s107 /home/modes.b/rcafunc.vhd|
+R9
+R10
+!s100 7`ceKS;lGVT1272ZA9m=O3
+!i10b 1
+Arca_func_arc
+R12
+R13
+Z45 DEx4 work 7 rcafunc 0 22 AlSffmVHcOWa_kD>>CXMK2
+l31
+L16
+V7PLKb6iRWW49[38TElzYz3
+R5
+32
+R42
+R43
+R44
+R9
+R10
+!s100 8`d`kd=;h65gNL1LlL[Bg2
+!i10b 1
+Arca
+R12
+R13
+R45
+l31
+L16
+VVeJhf6N1Xc;[ZTV1:gmC00
+R5
+32
+R43
+R44
+R9
+R10
+w1404374235
+!s108 1404374254.032197
+!s100 T?i21XQ>Y?UmVL835cYOa0
+!i10b 1
+Ercafuncgen
+Z46 w1404376421
+R12
+R13
+R2
+Z47 8/home/modes.b/rcafuncgen.vhd
+Z48 F/home/modes.b/rcafuncgen.vhd
+l0
+L4
+VYFJhGk@e`5>:Meo2K2_:O1
+R5
+32
+Z49 !s108 1404377269.417370
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/rcafuncgen.vhd|
+Z51 !s107 /home/modes.b/rcafuncgen.vhd|
+R9
+R10
+!s100 <HE9U]BD32eDeFbImF_bo3
+!i10b 1
+Arca_func_gen_arc
+R12
+R13
+Z52 DEx4 work 10 rcafuncgen 0 22 YFJhGk@e`5>:Meo2K2_:O1
+l33
+L16
+VAY86]7OPahG;j=ZmM;Chj0
+!s100 C[lm8Hz:HD]6T[;A^_@Em1
+R5
+32
+R49
+R50
+R51
+R9
+R10
+!i10b 1
+Arca_func_arc
+R12
+R13
+R52
+l33
+L16
+VBzS8[i3=n<W;5;<`9?CNi3
+R5
+32
+R9
+R10
+w1404376159
+R50
+R51
+!s108 1404376320.169287
+!s100 QzP_<Gg?mEGX0o0nbfaH>0
+!i10b 1
+Ercafuncproc
+Z53 w1404377138
+R12
+R13
+R2
+Z54 8/home/modes.b/rcaprocedure.vhd
+Z55 F/home/modes.b/rcaprocedure.vhd
+l0
+L4
+VU7PCP3KU0j3;Pb3RA2=kB0
+!s100 fjBc<7h4FUQf<X24O::X=1
+R5
+32
+!i10b 1
+Z56 !s108 1404377269.485049
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/rcaprocedure.vhd|
+Z58 !s107 /home/modes.b/rcaprocedure.vhd|
+R9
+R10
+Arca_func_proc_arc
+R12
+R13
+Z59 DEx4 work 11 rcafuncproc 0 22 U7PCP3KU0j3;Pb3RA2=kB0
+l28
+L16
+Z60 VI[bXDNVNgP:3Q;C`aGYIc1
+Z61 !s100 ]_jlNiAM;YYC8N:m6dW`a0
+R5
+32
+!i10b 1
+R56
+R57
+R58
+R9
+R10
+Eripplecarryadder
+Z62 w1404292070
+R12
+R13
+R2
+Z63 8/home/modes.b/ripplecarryadder.vhd
+Z64 F/home/modes.b/ripplecarryadder.vhd
+l0
+L4
+V[VVX;SK:BGEC>[S`7izoj3
+R5
+32
+Z65 !s108 1404373714.192569
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/ripplecarryadder.vhd|
+Z67 !s107 /home/modes.b/ripplecarryadder.vhd|
+R9
+R10
+!s100 0L1M5n:elZJYUna]_V4Xz1
+!i10b 1
+Arca
+R12
+R13
+DEx4 work 16 ripplecarryadder 0 22 [VVX;SK:BGEC>[S`7izoj3
+l27
+L16
+V67QWa7hm<2ZX<Dn<B`o>l0
+R5
+32
+R65
+R66
+R67
+R9
+R10
+!s100 G5`:Dcz2a:]V6oKc4SARQ2
+!i10b 1
+Eripplecarryadderfunc
+Z68 w1404372060
+R12
+R13
+R2
+R40
+R41
+l0
+L4
+VYldIGfEILa@`2iQz<0>^@2
+R5
+32
+Z69 !s108 1404374228.843709
+R43
+R44
+R9
+R10
+!s100 :QV5RI=L=:@UIRKUE^fBz3
+!i10b 1
+Arca
+R12
+R13
+DEx4 work 20 ripplecarryadderfunc 0 22 YldIGfEILa@`2iQz<0>^@2
+l31
+L16
+Va^RId00ezI0_gah0i5g6F1
+R5
+32
+R69
+R43
+R44
+R9
+R10
+!s100 US6PY>]LRQ``Z3YJ:O^Tz1
+!i10b 1
+Esigvsvar
+Z70 w1404287494
+R12
+R13
+R2
+Z71 8/home/modes.b/problem1.vhd
+Z72 F/home/modes.b/problem1.vhd
+l0
+L4
+V=3EBQ=kDGY@[U:EHY@Sfe3
+R5
+32
+Z73 !s108 1404287509.242462
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/problem1.vhd|
+Z75 !s107 /home/modes.b/problem1.vhd|
+R9
+R10
+!s100 kU:X;GEnfPM[F3SHKR>Tb0
+!i10b 1
+Avar
+R12
+R13
+Z76 DEx4 work 8 sigvsvar 0 22 =3EBQ=kDGY@[U:EHY@Sfe3
+l28
+L25
+VZMo8:?T7b@IZ]2Z;g3J500
+R5
+32
+R73
+R74
+R75
+R9
+R10
+!s100 B0NLzlHQ`=dL0^<FKB[7]3
+!i10b 1
+Asig
+R12
+R13
+R76
+l11
+L7
+Vf3cGGCo?<mFJ1Ha`771e60
+R5
+32
+R73
+R74
+R75
+R9
+R10
+!s100 bW0ZZ?oAZMfYb;azF__UP2
+!i10b 1
+Etb_rca
+Z77 w1404377240
+R12
+R13
+R2
+Z78 8/home/modes.b/testbench.vhd
+Z79 F/home/modes.b/testbench.vhd
+l0
+L4
+VeKd[0WzIh7;hSGdLDbVWW3
+R5
+32
+Z80 !s108 1404377269.217833
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/testbench.vhd|
+Z82 !s107 /home/modes.b/testbench.vhd|
+R9
+R10
+!s100 1lI55RUSBVQ`c@gX4;Uhz1
+!i10b 1
+Atb
+R59
+R12
+R13
+DEx4 work 6 tb_rca 0 22 eKd[0WzIh7;hSGdLDbVWW3
+l10
+L7
+VE9NjNQefGLbN0aHEz5fCf0
+R5
+32
+R80
+R81
+R82
+R9
+R10
+!s100 i=m8`gzzMlOD<g>7U>c?U2
+!i10b 1

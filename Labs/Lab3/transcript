@@ -1,0 +1,10 @@
+vsim work.rcafuncgen
+# vsim work.rcafuncgen 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.rcafuncgen(rca_func_gen_arc)
+# ** Fatal: (vsim-3350) Generic "N" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /rcafuncgen File: /home/modes.b/rcafuncgen.vhd Line: 6
+# FATAL ERROR while loading design
+# Error loading design

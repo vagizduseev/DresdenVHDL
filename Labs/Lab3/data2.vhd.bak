@@ -1,0 +1,33 @@
+entity data_types is
+end data_types;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+architecture data1 of data_types is
+  signal s1,s2,res,carry : std_logic;
+begin
+
+    res <= s1 xor s2;
+    carry <= s1 and s2; 
+  process 
+    begin
+      s1 <= '0';   
+      s2 <= '0'; 
+      wait for 10 ns;
+       s1 <= '0';   
+      s2 <= '1'; 
+      wait for 10 ns;
+       s1 <= '1';   
+      s2 <= '0'; 
+      wait for 10 ns;
+       s1 <= '1';   
+      s2 <= '1'; 
+      wait for 10 ns;
+       s1 <= '0';   
+      s2 <= '0'; 
+      wait;
+
+  end process;
+    
+      
+end data1;
