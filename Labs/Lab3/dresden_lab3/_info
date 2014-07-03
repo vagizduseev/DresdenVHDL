@@ -1,0 +1,393 @@
+m255
+K3
+13
+cModel Technology
+dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab2
+Efulladder
+Z0 w1404421805
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab3
+Z4 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/fulladder.vhd
+Z5 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/fulladder.vhd
+l0
+L4
+V>zGYNQ]8Zk9DK;2CK0bLb2
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1404422867.143000
+Z8 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/fulladder.vhd|
+Z9 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/fulladder.vhd|
+Z10 o-work dresden_lab3 -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 6MfcnAfU:fOO]D`kaj13f2
+!i10b 1
+Afa_impl
+R1
+R2
+DEx4 work 9 fulladder 0 22 >zGYNQ]8Zk9DK;2CK0bLb2
+l12
+L11
+V::hzY1bk<iHi>UMD<9[?k1
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 2ZRO=X0C]632lbKgPAF;M2
+!i10b 1
+Erca
+Z12 w1404422833
+R1
+R2
+R3
+Z13 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca.vhd
+Z14 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca.vhd
+l0
+L4
+VSoJTBCe<e708z<H1Y`z3[1
+R6
+32
+Z15 !s108 1404422867.543000
+Z16 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca.vhd|
+Z17 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca.vhd|
+R10
+R11
+!s100 9@<L64Ca28>:X;>Vczdbe0
+!i10b 1
+Arca_arc
+R1
+R2
+Z18 DEx4 work 3 rca 0 22 SoJTBCe<e708z<H1Y`z3[1
+l27
+L16
+Va4F1T9<8`3CeL_E4ioZe81
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 4ERQ;?d0ic`YGF;=@7kBO0
+!i10b 1
+Erca_func
+Z19 w1404422785
+R1
+R2
+R3
+Z20 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func.vhd
+Z21 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func.vhd
+l0
+L4
+VgGj36b6QVE1CzfI?PjWNc1
+R6
+32
+Z22 !s108 1404422868.281000
+Z23 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func.vhd|
+Z24 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func.vhd|
+R10
+R11
+!s100 IB:Db3Y`h^OgXU^5>1<zh2
+!i10b 1
+Arca_func_arc
+R1
+R2
+Z25 DEx4 work 8 rca_func 0 22 gGj36b6QVE1CzfI?PjWNc1
+l31
+L16
+VZUdJmd?7NVnXS[g98jY020
+R6
+32
+R22
+R23
+R24
+R10
+R11
+!s100 LeG6UPg^U[FRE>H:T4FMG2
+!i10b 1
+Erca_func_gen
+Z26 w1404422661
+R1
+R2
+R3
+Z27 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen.vhd
+Z28 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen.vhd
+l0
+L4
+Ve2eJL?PeGRPHim4BnBZcQ1
+R6
+32
+Z29 !s108 1404422868.850000
+Z30 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen.vhd|
+Z31 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen.vhd|
+R10
+R11
+!s100 no9OoVQ;MnYo6C?]`]TWV1
+!i10b 1
+Arca_func_gen_arc
+R1
+R2
+Z32 DEx4 work 12 rca_func_gen 0 22 e2eJL?PeGRPHim4BnBZcQ1
+l33
+L16
+VjMhYIagj8LAn>JH`1lfMF3
+R6
+32
+R29
+R30
+R31
+R10
+R11
+!s100 ]Ek^Mj71]m?bM13LUcY3G0
+!i10b 1
+Erca_func_gen_tb
+Z33 w1404422683
+R1
+R2
+R3
+Z34 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen_tb.vhd
+Z35 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen_tb.vhd
+l0
+L4
+V?oUkgZLm71L=RQSo]^c5T0
+R6
+32
+Z36 !s108 1404422869.180000
+Z37 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen_tb.vhd|
+Z38 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_gen_tb.vhd|
+R10
+R11
+!s100 4^RdhQjO:dBcJ047B4z0X2
+!i10b 1
+Arca_func_gen_tb_arc
+R32
+R1
+R2
+DEx4 work 15 rca_func_gen_tb 0 22 ?oUkgZLm71L=RQSo]^c5T0
+l10
+L7
+VJc4IQWL5;X;ZbM=BzzA_o2
+R6
+32
+R36
+R37
+R38
+R10
+R11
+!s100 3nIR?j`fB2jF4]A87GizQ2
+!i10b 1
+Erca_func_tb
+Z39 w1404422806
+R1
+R2
+R3
+Z40 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_tb.vhd
+Z41 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_tb.vhd
+l0
+L4
+VO<H67mcRk<=`EOOajPDbW1
+R6
+32
+Z42 !s108 1404422868.563000
+Z43 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_tb.vhd|
+Z44 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_func_tb.vhd|
+R10
+R11
+!s100 JL92hQWZ3AWFW2IO=8jHD1
+!i10b 1
+Arca_func_tb_arc
+R25
+R1
+R2
+DEx4 work 11 rca_func_tb 0 22 O<H67mcRk<=`EOOajPDbW1
+l10
+L7
+VBIVMeYbNS5Zg[WHbW4GIV2
+R6
+32
+R42
+R43
+R44
+R10
+R11
+!s100 @AmOE;RI7mS6U2dPzi0UI0
+!i10b 1
+Erca_procedure
+Z45 w1404422597
+R1
+R2
+R3
+Z46 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure.vhd
+Z47 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure.vhd
+l0
+L4
+V5:HUmkCT3A9[hJ4d1F3>X2
+R6
+32
+Z48 !s108 1404422869.501000
+Z49 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure.vhd|
+Z50 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure.vhd|
+R10
+R11
+!s100 =mdzHVDM]^m6YWXL6XTzW2
+!i10b 1
+Arca_procedure_arc
+R1
+R2
+Z51 DEx4 work 13 rca_procedure 0 22 5:HUmkCT3A9[hJ4d1F3>X2
+l28
+L16
+V`=<WP]a[gQmQ1AX2GDBC92
+R6
+32
+R48
+R49
+R50
+R10
+R11
+!s100 eW;3hjR15V>z?Wf[k0^O41
+!i10b 1
+Erca_procedure_tb
+Z52 w1404422612
+R1
+R2
+R3
+Z53 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure_tb.vhd
+Z54 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure_tb.vhd
+l0
+L4
+Vb^eLM4Z18k02ZfeDG:M`20
+!s100 8M7E1`fT;Z9Z<kgj>02>o3
+R6
+32
+!i10b 1
+Z55 !s108 1404422869.939000
+Z56 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure_tb.vhd|
+Z57 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_procedure_tb.vhd|
+R10
+R11
+Arca_procedure_tb_arc
+R51
+R1
+R2
+DEx4 work 16 rca_procedure_tb 0 22 b^eLM4Z18k02ZfeDG:M`20
+l10
+L7
+V^Y2fB^K;IS=U^oSSe@c133
+!s100 Tn;ZKODkY]1[;O0clfzaV1
+R6
+32
+!i10b 1
+R55
+R56
+R57
+R10
+R11
+Erca_tb
+Z58 w1404422858
+R1
+R2
+R3
+Z59 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_tb.vhd
+Z60 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_tb.vhd
+l0
+L4
+V=NB[CJgMgWIDe<0LFdlnh1
+R6
+32
+Z61 !s108 1404422867.912000
+Z62 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_tb.vhd|
+Z63 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/rca_tb.vhd|
+R10
+R11
+!s100 6FO;:Kef@D:B4BiH<>Z@e2
+!i10b 1
+Arca_tb_arc
+R18
+R1
+R2
+Z64 DEx4 work 6 rca_tb 0 22 =NB[CJgMgWIDe<0LFdlnh1
+l10
+L7
+Vicc?UZ`?m9l5i2IDG9XM^0
+R6
+32
+R61
+R62
+R63
+R10
+R11
+!s100 <0Lfg2UioW_QCGHzGgV8Q2
+!i10b 1
+Atb
+DEx4 work 3 rca 0 22 hkklCMARbcbQTmbFibEi]2
+R1
+R2
+R64
+l10
+L7
+VlS@WD8Z6_9nc29c4feQo[0
+R6
+32
+R62
+R10
+R11
+w1404422087
+R63
+!s108 1404422089.546000
+!s100 Yz8fUOYDS4m`bX<On3_>_1
+!i10b 1
+Esigvsvar
+Z65 w1404421770
+R1
+R2
+R3
+Z66 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/sigvar.vhd
+Z67 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/sigvar.vhd
+l0
+L4
+V`4JTR;<I:3JbT8_Hfj3?]0
+R6
+32
+Z68 !s108 1404422866.857000
+Z69 !s90 -reportprogress|300|-work|dresden_lab3|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/sigvar.vhd|
+Z70 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab3/sigvar.vhd|
+R10
+R11
+!s100 kU:X;GEnfPM[F3SHKR>Tb0
+!i10b 1
+Avar
+R1
+R2
+Z71 DEx4 work 8 sigvsvar 0 22 `4JTR;<I:3JbT8_Hfj3?]0
+l27
+L24
+V@XoJf`?CJkV[14zmdlXo12
+R6
+32
+R68
+R69
+R70
+R10
+R11
+!s100 <ob2SIc[?Sa3;nNIAEnMz1
+!i10b 1
+Asig
+R1
+R2
+R71
+l11
+L7
+V4:HERBdXB_2dzl;OMLkVl3
+R6
+32
+R68
+R69
+R70
+R10
+R11
+!s100 c_]>X4FYLoS;=mQRaaBTB3
+!i10b 1

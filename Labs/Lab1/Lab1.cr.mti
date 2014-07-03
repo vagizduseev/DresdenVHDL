@@ -1,0 +1,7 @@
+{C:/Source/University/VHDL/DresdenVHDL/Labs/Lab1 - Hello World with Concurrency/hello.vhd} {1 {vcom -work dresden_lab1 -2002 -explicit {C:/Source/University/VHDL/DresdenVHDL/Labs/Lab1 - Hello World with Concurrency/hello.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity HELLO
+-- Compiling architecture HELLO_1 of HELLO
+
+} {} {}}

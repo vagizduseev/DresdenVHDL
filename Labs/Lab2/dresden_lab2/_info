@@ -1,0 +1,166 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.1
+Ebinarycounter
+Z0 w1404421152
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab2
+Z5 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/binary_counter.vhd
+Z6 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/binary_counter.vhd
+l0
+L5
+VWE`fARKk[<DdN;bW=QKHS3
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1404421614.528000
+Z9 !s90 -reportprogress|300|-work|dresden_lab2|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/binary_counter.vhd|
+Z10 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/binary_counter.vhd|
+Z11 o-work dresden_lab2 -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 ^UE8W`Xmi<L[5i2?j@D1l3
+!i10b 1
+Abc_arc
+R1
+R2
+R3
+DEx4 work 13 binarycounter 0 22 WE`fARKk[<DdN;bW=QKHS3
+l14
+L8
+V9hY=_C`:2>[Z:7b261ULm1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 GM<D=e2jRlzKm;e@bUYaI0
+!i10b 1
+Efulladdertest
+Z13 w1404421044
+R2
+R3
+R4
+Z14 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/fulladder_test.vhd
+Z15 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/fulladder_test.vhd
+l0
+L4
+V[>R7zd:45BKNi<z3aM6[c1
+!s100 L`[<2cOX[<z?4fQMV5kHP3
+R7
+32
+!i10b 1
+Z16 !s108 1404421615.478000
+Z17 !s90 -reportprogress|300|-work|dresden_lab2|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/fulladder_test.vhd|
+Z18 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/fulladder_test.vhd|
+R11
+R12
+Afa_test_arc
+R2
+R3
+DEx4 work 13 fulladdertest 0 22 [>R7zd:45BKNi<z3aM6[c1
+l9
+L7
+V@4Ygmfd7j84h^_60TB0VQ1
+!s100 K?ShbjLS6a8_60SCzT46`2
+R7
+32
+!i10b 1
+R16
+R17
+R18
+R11
+R12
+Ewavecomparison1
+Z19 w1404421595
+R2
+R3
+R4
+Z20 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_1.vhd
+Z21 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_1.vhd
+l0
+L4
+V2Tf56@lJd4bnBzBVA<kdm3
+R7
+32
+Z22 !s108 1404421614.856000
+Z23 !s90 -reportprogress|300|-work|dresden_lab2|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_1.vhd|
+Z24 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_1.vhd|
+R11
+R12
+!s100 1hU?8^70?BBRd?1>z<]_13
+!i10b 1
+Awc_arc_1
+R2
+R3
+Z25 DEx4 work 15 wavecomparison1 0 22 2Tf56@lJd4bnBzBVA<kdm3
+l9
+L7
+Vm=>W0W]8a=D?FXgLHM?0G0
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 ^L>1eILo>I6QnT;ejCP3P3
+!i10b 1
+Awc_rca
+R2
+R3
+R25
+l9
+L7
+Ve`C_SVk:0eRM]=KK2doKQ3
+R7
+32
+Z26 !s90 -reportprogress|300|-work|dresden_lab2|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_2.vhd|
+Z27 !s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_2.vhd|
+R11
+R12
+Z28 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_2.vhd
+w1404421564
+Z29 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab2/waveform_comparison_2.vhd
+!s108 1404421567.421000
+!s100 ZS5oo`bR1IOcZ;6iRo2GD1
+!i10b 1
+Ewavecomparison2
+Z30 w1404421597
+R2
+R3
+R4
+R29
+R28
+l0
+L4
+VPFY>AY2dJlU4d^N7lhdXT1
+R7
+32
+Z31 !s108 1404421615.193000
+R26
+R27
+R11
+R12
+!s100 9[ZACXlNom>^KTg@Xg2SS1
+!i10b 1
+Awc_arc_2
+R2
+R3
+DEx4 work 15 wavecomparison2 0 22 PFY>AY2dJlU4d^N7lhdXT1
+l9
+L7
+V`fBAoDejmZS]8::PzX5li2
+!s100 cf<bD@lIAc0B^0RWMK5D@2
+R7
+32
+R31
+R26
+R27
+R11
+R12
+!i10b 1

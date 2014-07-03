@@ -1,9 +1,0 @@
-/home/modes.b/data_types.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/data_types.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Compiling entity data_types
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling architecture data1 of data_types
-
-} {} {}}

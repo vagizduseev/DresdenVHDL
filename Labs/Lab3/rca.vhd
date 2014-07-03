@@ -1,24 +1,24 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity RCA is
+entity rca is
   generic(
     N : positive
   );
   port(
-    carry_in        : in std_logic;
-    word_1, word_2  : in std_logic_vector(N-1 downto 0);
-    carry_out       : out std_logic;
-    summ            : out std_logic_vector(N-1 downto 0)
+    carry_in : in std_logic;
+    word_1, word_2 : in std_logic_vector(N-1 downto 0);
+    carry_out : out std_logic;
+    summ : out std_logic_vector(N-1 downto 0)
   );
 end entity;
 
-architecture rca_arc of RCA is
+architecture RCA_ARC of rca is
   
   component FullAdder is
     port(
-      A, B, Cin : in  std_logic;
-      S, Cout   : out std_logic
+      A, B, Cin : in std_logic;
+      S, Cout : out std_logic
     );
   end component;
   
@@ -27,29 +27,29 @@ architecture rca_arc of RCA is
 begin
   f0 : FullAdder
     port map(
-      A     => word_1(0),
-      B     => word_2(0),
-      Cin   => carry_in,
-      S     => summ(0),
-      Cout  => coS(0)
+      A => word_1(0),
+      B => word_2(0),
+      Cin => carry_in,
+      S => summ(0),
+      Cout => coS(0)
     );
   fN : FullAdder
     port map(
-      A     => word_1(N-1),
-      B     => word_2(N-1),
-      Cin   => coS(N-2),
-      S     => summ(N-1),
-      Cout  => carry_out
+      A => word_1(N-1),
+      B => word_2(N-1),
+      Cin => coS(N-2),
+      S => summ(N-1),
+      Cout => carry_out
     );
   ripple_adder : for i in 1 to N-2 generate
     f : FullAdder
       port map(
-        A     => word_1(i),
-        B     => word_2(i),
-        Cin   => coS(i - 1),
-        S     => summ(i),
-        Cout  => coS(i)
+        A => word_1(i),
+        B => word_2(i),
+        Cin => coS(i - 1),
+        S => summ(i),
+        Cout => coS(i)
       );
-  end generate; 
+  end generate;
   
 end architecture;
