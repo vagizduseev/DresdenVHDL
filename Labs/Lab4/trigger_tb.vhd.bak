@@ -4,12 +4,15 @@ use IEEE.std_logic_1164.all;
 entity trigger_tb is
 end entity;
 
+library dresden_lab4;
+
 architecture TRIGGER_TB_ARC of trigger_tb is
   signal event, reset, clock, trigger : std_logic;
+
 begin
   
   -- Trigger
-  trg_test : entity trigger
+  trg_test : entity dresden_lab4.trigger(trigger_arc)
     generic map(THRESHOLD => 3)
     port map(
       clk => clock,
@@ -19,9 +22,8 @@ begin
     );
 
   -- Test statement
-  if trigger = '1' then
+  assert trigger /= '1'
     report "Trigger has succesfuly emmited a signal";
-  end if;
     
   process
   begin
@@ -32,16 +34,18 @@ begin
     clock <= '1';
     reset <= '1';
     wait for 5 ns;
-    report "Reset commited"
+    report "Reset commited";
     
     clock <= '0';
+    reset <= '0';
     wait for 5 ns;
     report "Set clk to zero and wait";
     
     -- Event #1
-    clock <= '1';
     event <= '1';
+    clock <= '1';
     wait for 5 ns;
+    report "Event!";
     
     clock <= '0';
     event <= '0';
@@ -49,22 +53,24 @@ begin
     report "Set clk to zero and wait";
     
     -- Event #2
-    clock <= '1';
     event <= '1';
+    clock <= '1';
     wait for 5 ns;
+    report "Event!";
     
-    clock <= '0';
     event <= '0';
+    clock <= '0';
     wait for 5 ns;
     report "Set clk to zero and wait";
     
     -- Event #3
-    clock <= '1';
     event <= '1';
+    clock <= '1';
     wait for 5 ns;
+    report "Event!";
     
-    clock <= '0';
     event <= '0';
+    clock <= '0';
     wait for 5 ns;
     report "Set clk to zero and wait";
         
