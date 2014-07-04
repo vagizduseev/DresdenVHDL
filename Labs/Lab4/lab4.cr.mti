@@ -21,16 +21,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 ** Error: C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd(37): near "clock": expecting ';'
 ** Error: C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd(78): VHDL Compiler exiting
 
-} {8.0 9.0 10.0 14.0} {}} /home/modes.b/DresdenVHDL/Labs/Lab4/collect.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/DresdenVHDL/Labs/Lab4/collect.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity collect
--- Compiling architecture COLLECT_ARC of collect
-
-} {} {}} trigger_tb.vhd {1 {vcom -work dresden_lab4 -2002 -explicit /home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
+} {8.0 9.0 10.0 14.0} {}} trigger_tb.vhd {1 {vcom -work dresden_lab4 -2002 -explicit /home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -39,6 +30,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling architecture TRIGGER_TB_ARC of trigger_tb
 -- Loading package NUMERIC_STD
 -- Loading entity trigger
+
+} {} {}} /home/modes.b/DresdenVHDL/Labs/Lab4/collect_tb.vhd {1 {vcom -work work -2002 -explicit /home/modes.b/DresdenVHDL/Labs/Lab4/collect_tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity collect_tb
+-- Compiling architecture COLLECT_TB_ARC of collect_tb
+-- Loading package NUMERIC_STD
+-- Loading entity collect
 
 } {} {}} C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd {0 {vcom -work dresden_lab4 -2002 -explicit C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012

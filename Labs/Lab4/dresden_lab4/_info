@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab3
 Ecollect
-Z0 w1404461476
+Z0 w1404463976
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,7 +16,7 @@ L5
 VVg5M2C`P=`Y9Ckiin>S>i2
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1404461833.471981
+Z8 !s108 1404463998.245906
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/collect.vhd|
 Z10 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/collect.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -30,8 +30,7 @@ R3
 DEx4 work 7 collect 0 22 Vg5M2C`P=`Y9Ckiin>S>i2
 l22
 L20
-VJ4?f5FLzeURKAB>>8allW0
-!s100 5>bzYP05JV6hnL2iHAoZ20
+V1ane>z0^c79F_55i[[8LZ1
 R7
 32
 R8
@@ -39,9 +38,10 @@ R9
 R10
 R11
 R12
+!s100 Hm<;YGELjF^dhTed8H_dM1
 !i10b 1
 Ecollect_tb
-Z13 w1404461815
+Z13 w1404463709
 R2
 R3
 R4
@@ -54,7 +54,7 @@ V9jm`Z]9@N0OghUDU_HV7W3
 R7
 32
 !i10b 1
-Z16 !s108 1404461835.022567
+Z16 !s108 1404463998.319478
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/collect_tb.vhd|
 Z18 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/collect_tb.vhd|
 R11
@@ -67,8 +67,8 @@ R3
 Z20 DEx4 work 10 collect_tb 0 22 9jm`Z]9@N0OghUDU_HV7W3
 l14
 L9
-VcBFzBi4[JUYHl2iYJEl`d0
-!s100 1kDbMk^`5HDHhNPX<hK5W3
+Z21 VU34]3UG_>8d1LjO;Nb@A11
+Z22 !s100 >UDcI=Q_DSI=jfoCEISYT3
 R7
 32
 !i10b 1
@@ -78,22 +78,22 @@ R18
 R11
 R12
 Etrigger
-Z21 w1404455565
+Z23 w1404455565
 R1
 R2
 R3
 R4
-Z22 8/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd
-Z23 F/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd
+Z24 8/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd
+Z25 F/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd
 l0
 L5
 V]1c9Y2n=jL038f]Pb;@M`2
 R7
 32
-Z24 !s108 1404461833.326998
-Z25 !s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd|
-Z26 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd|
-Z27 o-work dresden_lab4 -2002 -explicit -O0
+Z26 !s108 1404463998.097229
+Z27 !s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd|
+Z28 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/trigger.vhd|
+Z29 o-work dresden_lab4 -2002 -explicit -O0
 R12
 !s100 ImdfI[m`DjVX4YQI1>MiU0
 !i10b 1
@@ -107,29 +107,29 @@ L17
 VUUShDJ:z@<_HoKD?JHEZn1
 R7
 32
-R24
-R25
 R26
 R27
+R28
+R29
 R12
 !s100 5Iz4YLj051E7Jmn8a`@cE3
 !i10b 1
 Etrigger_tb
-Z28 w1404456619
+Z30 w1404456619
 R2
 R3
 R4
-Z29 8/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
-Z30 F/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
+Z31 8/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
+Z32 F/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
 l0
 L4
 VDFihO@3BcYdUC0B15GZ9J1
 R7
 32
-Z31 !s108 1404461833.397854
-Z32 !s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
-Z33 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
-R27
+Z33 !s108 1404463998.171691
+Z34 !s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|/home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
+Z35 !s107 /home/modes.b/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
+R29
 R12
 !s100 Z5Smi[3JGhQ_=I?Rd:m5=0
 !i10b 1
@@ -144,10 +144,10 @@ L9
 Vgm`DFCi;^e?aPi:z]OWb11
 R7
 32
-R31
-R32
 R33
-R27
+R34
+R35
+R29
 R12
 !s100 J4YVTZ>[EDRH<?zSFMM8M1
 !i10b 1
