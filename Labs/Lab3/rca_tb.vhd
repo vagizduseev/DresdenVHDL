@@ -10,7 +10,7 @@ architecture RCA_TB_ARC of rca_tb is
 begin
   
   -- Simple Ripple Carry Adder
-  rca_test : entity work.rca
+  rca_test : entity dresden_lab3.rca
     generic map(N => 4)
     port map(
       carry_in => carry_in,

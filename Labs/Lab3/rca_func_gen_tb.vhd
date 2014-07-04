@@ -10,7 +10,7 @@ architecture RCA_FUNC_GEN_TB_ARC of rca_func_gen_tb is
 begin
   
   -- Ripple Carry Adder implemented as a function with generate statement
-  rca_func_test : entity work.rca_func_gen
+  rca_func_test : entity dresden_lab3.rca_func_gen
     generic map(N => 4)
     port map(
       carry_in => carry_in,

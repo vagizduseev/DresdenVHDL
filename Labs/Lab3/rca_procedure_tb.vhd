@@ -10,7 +10,7 @@ architecture RCA_PROCEDURE_TB_ARC of rca_procedure_tb is
 begin
       
   -- Ripple Carry Adder implemented as a procedure
-  rca_func_test : entity work.rca_procedure
+  rca_func_test : entity dresden_lab3.rca_procedure
       generic map(N => 4)
       port map(
         carry_in => carry_in,

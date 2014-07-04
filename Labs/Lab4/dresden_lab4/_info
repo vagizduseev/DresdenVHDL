@@ -1,0 +1,61 @@
+m255
+K3
+13
+cModel Technology
+dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab3
+Etrigger
+Z0 w1404426853
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Source\University\VHDL\DresdenVHDL\Labs\Lab4
+Z5 8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd
+Z6 FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd
+l0
+L5
+V]1c9Y2n=jL038f]Pb;@M`2
+!s100 ImdfI[m`DjVX4YQI1>MiU0
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+!s108 1404426856.307000
+Z8 !s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd|
+!s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd|
+Z9 o-work dresden_lab4 -2002 -explicit -O0
+Z10 tExplicit 1
+Atrigger_arc
+R1
+R2
+R3
+DEx4 work 7 trigger 0 22 ]1c9Y2n=jL038f]Pb;@M`2
+l19
+L17
+VfQm7I_:8lElLdbVE]CW?V2
+R7
+32
+R8
+R9
+R10
+!s108 1404426688.494000
+!s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger.vhd|
+!s100 WKPif<g5PCkdZT59]b4AD2
+!i10b 1
+Etrigger_tb
+w1404425542
+R2
+R3
+R4
+8C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
+FC:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd
+l0
+L4
+VDFihO@3BcYdUC0B15GZ9J1
+R7
+32
+R9
+R10
+!s100 Z5Smi[3JGhQ_=I?Rd:m5=0
+!i10b 1
+!s108 1404425568.629000
+!s90 -reportprogress|300|-work|dresden_lab4|-2002|-explicit|C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
+!s107 C:/Source/University/VHDL/DresdenVHDL/Labs/Lab4/trigger_tb.vhd|
