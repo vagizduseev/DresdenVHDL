@@ -17,7 +17,6 @@ architecture PS2_RECEIVER_ARC of ps2receiver is
     signal dff_0, dff_1     : std_logic := '1';
     signal strb	    : std_logic := '0';
 begin
-    -- comment
     strobe  <= strb;
     byte    <= buf(8 downto 1);
 
@@ -38,10 +37,10 @@ begin
                         buf <= data & buf(10 downto 1);
                     end if;
                 --
-				when Sending =>
-					strb    <= '1';
-					state   <= Erasing;
-				--	
+                when Sending =>
+                    strb    <= '1';
+                    state   <= Erasing;
+                --	
                 when Erasing =>
                     strb    <= '0';
                     buf     <= (others => '1');
