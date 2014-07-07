@@ -2,18 +2,21 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity display is
+    type input  is array(natural range <>) of unsigned(3 downto 0);
+    type output is array(natural range <>) of std_logic_vector(6 downto 0);
+    --
     port(
         -- synchronising 50 MHz clock signal 
-        clk	: in std_logic;
+        -- clk	: in std_logic;
         -- input 4-bit numbers for each LED
-        num0, num1, num2, num3 	: in unsigned(3 downto 0);
+        num	: in input(3 downto 0);
         -- output vetors to actual LED ports
-        dsp0, dsp1, dsp2, dsp3	: out std_logic_vector(6 downto 0)
+        led : out output(3 downto 0)
     );
 end entity;
 
 architecture DISPLAY_ARC of display is
-    signal out0, out1, out2, out3 : std_logic_vector(6 downto 0) := (others => '1');
+    --
     procedure converter(
         signal number : in unsigned(3 downto 0);
         signal led : out std_logic_vector(6 downto 0)) is
@@ -70,17 +73,8 @@ architecture DISPLAY_ARC of display is
         end case;
     end procedure;
 begin
-    dsp0 <= out0;
-    dsp1 <= out1;
-    dsp2 <= out2;
-    dsp3 <= out3;
-    process(clk)
+    convert : for i in 0 to 3 generate
     begin
-        if rising_edge(clk) then    -- TODO: rewrite this ugly stuff
-            converter(num0, out0);
-            converter(num1, out1);
-            converter(num2, out2);
-            converter(num3, out3);
-        end if;
-    end process;
+        converter(num(i), led(i));
+    end generate;
 end architecture;
