@@ -13,5 +13,7 @@ These lectures and labs are property of Thomas Preusser.
   - Lab 4 "Sequential Circuits"
   - Lab 5 "Starting with the DE0 Educational Board"
   - Lab 6 "PS/2 keyboard"
-  - Lab 7 "Triple Modular Redundancy"
-  - Lab 8 "noname"
+
+  - Lab 7 Fault Tolerant Systems "Triple Modular Redundancy"
+  - Lab 8 Fault Tolerant Systems "Parity checking"
+  - Lab 9 Fault Tolerant Systems "Single bit correcting Hamming Code"
