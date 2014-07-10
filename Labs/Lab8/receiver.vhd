@@ -19,7 +19,6 @@ use IEEE.numeric_std.all; -- for type conversion to_unsigned
 -- entity description
 entity receiver is
 port(
-        clk             :   IN  std_ulogic;
 		receiver_in		:	IN	std_ulogic_vector(6 downto 0);
 		receiver_out	:	OUT	std_ulogic_vector(3 downto 0);
 		receiver_err	:	OUT	std_ulogic
@@ -29,28 +28,37 @@ end entity;
 -- architecture description
 
 architecture behave of receiver is
-    type    rState      is  (ParityComputation, s1, s2);
-    signal  state       :   rState                          :=  ParityComputation;
-    signal  correction  :   std_ulogic_vector(6 downto 0)   :=  (others => '0');
     signal  p4, p2, p1  :   std_ulogic                      :=  '0';
 begin    
     
-    correction      <=  channel_in(6 downto 0)  xor 
-                        
-    process(clk)
+    process(receiver_in)
+        variable    syndrome    :   std_ulogic_vector(2 downto 0);
     begin
-        if rising_edge(clk)
-            case state is
-                when ParityComputation
-            end case;
+        syndrome(0) :=  receiver_in(0)  xor receiver_in(2)  xor receiver_in(4)  xor receiver_in(6);     -- p1
+        syndrome(1) :=  receiver_in(1)  xor receiver_in(2)  xor receiver_in(5)  xor receiver_in(6);     -- p2
+        syndrome(2) :=  receiver_in(3)  xor receiver_in(4)  xor receiver_in(5)  xor receiver_in(6);     -- p4
+
+        if syndrome = "000" then    -- no errors
+            receiver_err                <=  '0';
+            receiver_out(3 downto 0)    <=  receiver_in(6 downto 4) & receiver_in(2); 
+        else                        -- single bit error
+            receiver_err                <=  '1';            
+            case syndrome is
+                when "001" | "010" | "100" =>   -- parity error
+                    receiver_out    <=  receiver_in(6 downto 4) & receiver_in(2);
+                when "011" =>
+                    receiver_out    <=  receiver_in(6 downto 4) & (not receiver_in(2));
+                when "101" =>
+                    receiver_out    <=  receiver_in(6 downto 5) & (not receiver_in(4)) & receiver_in(2);
+                when "110" =>
+                    receiver_out    <=  receiver_in(6) & (not receiver_in(5)) & receiver_in(4) & receiver_in(2);
+                when "111" =>
+                    receiver_out    <=  (not receiver_in(6)) & receiver_in(5 downto 4) & receiver_in(2);    
+                when others =>
+                    null;
+            end case;        
         end if;
-    end process;
         
-    
-    -- channel output (coded by Hamming 7,4)
-    transmitter_out <=  count(3 downto 1)                                       -- d4, d3, d2
-                    &   (channel_in(3)  xor channel_in(2)   xor channel_in(1))  -- p4
-                    &   count(0)                                                -- d1
-                    &   (channel_in(3)  xor channel_in(2)   xor channel_in(0))  -- p2
-                    &   (channel_in(3)  xor channel_in(1)   xor channel_in(0)); -- p1      
+    end process;
+   
 end behave;

@@ -35,7 +35,7 @@ architecture behave of parity is
 begin
     
     transmitter_sys :   entity  work.transmitter(behave)
-    port(
+    port map(
         clk             =>  clk,
         rst             =>  rst,
         en              =>  en,
@@ -43,8 +43,10 @@ begin
     );
     
     receiver_sys    :   entity  work.receiver(behave)
-    port(
-        
+    port map(
+        receiver_in     =>  channel_out,
+        receiver_err    =>  receiver_err,
+        receiver_out    =>  receiver_out
     );
     
 end behave;
