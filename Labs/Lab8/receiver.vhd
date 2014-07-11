@@ -8,29 +8,28 @@ use IEEE.numeric_std.all; -- for type conversion to_unsigned
 
 --------------------------------------------------------------------------------
 --!@file: parity.vhd
---!@brief: this is a simple parity de- and encoder
+--!@brief: this is a hamming decoder
 --
---!@author: Tobias Koal(TK)
+--!@author: Tobias Koal(TK), Vagiz Duseev
 --!@revision info :
--- last modification by tkoal(TK)
--- Mon Feb  3 11:02:30 CET 2014 
+-- last modification by Vagiz Duseev
+-- Fri July 11 8:23:30 CET 2014 
 --------------------------------------------------------------------------------
 
 -- entity description
 entity receiver is
 port(
-		receiver_in		:	IN	std_ulogic_vector(6 downto 0);
-		receiver_out	:	OUT	std_ulogic_vector(3 downto 0);
-		receiver_err	:	OUT	std_ulogic
+    receiver_in      	:IN	std_ulogic_vector(6 downto 0);
+    receiver_out 	:	OUT	std_ulogic_vector(3 downto 0);
+    receiver_err	:	OUT	std_ulogic
 	);
 end entity;
 
 -- architecture description
 
 architecture behave of receiver is
-    signal  p4, p2, p1  :   std_ulogic                      :=  '0';
-begin    
-    
+    signal  p4, p2, p1  :   std_ulogi     :=  '0';
+begin
     process(receiver_in)
         variable    syndrome    :   std_ulogic_vector(2 downto 0);
     begin
@@ -58,7 +57,5 @@ begin
                     null;
             end case;        
         end if;
-        
     end process;
-   
 end behave;
