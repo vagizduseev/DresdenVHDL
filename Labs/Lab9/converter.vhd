@@ -14,7 +14,7 @@ end entity;
 
 architecture behave of Converter is
     -- states
-    type    cState  is  (Idle, Convert);
+    type    cState  is  (Idle, Initialize, Convert);
     signal  state   :   cState  :=  Idle;
     -- shift register and array of decimal digits
     signal  reg     :   unsigned(9 downto 0)    := (others => '0');
@@ -29,19 +29,26 @@ architecture behave of Converter is
     -- counters
     signal  counter :   unsigned(3 downto 0);
     signal  digit   :   unsigned(1 downto 0);
+    --
+    signal  prev    :   unsigned(9 downto 0)    := (others => '0');
 begin
     process(clk)
     begin
         if rising_edge(clk) then    
-            -- set sign output
-            if sign = '1' then
-                num_sign <= x"A";
-            else
-                num_sign <= x"F";
-            end if;
             -- state
             case state is
-                when Idle  =>
+                when Idle   =>
+                    if number(9 downto 0) /= prev(9 downto 0) then
+                        prev <= number;
+                        -- set sign output
+                        if sign = '1' then
+                            num_sign <= x"A";
+                        else
+                            num_sign <= x"F";
+                        end if;
+                        state <= Initialize;
+                    end if;
+                when Initialize  =>
                     -- start loop for nonzero input values
                     if valid = '1' then
                         -- set decimal digits to zero
@@ -61,6 +68,7 @@ begin
                         num(0)  <=  x"A";   -- set all digits to 'minus sign'
                         num(1)  <=  x"A";
                         num(2)  <=  x"A";
+                        state   <= Idle;
                     end if;
                     
                 when Convert =>
@@ -115,5 +123,10 @@ begin
         i   =>  num_sign,
         o   =>  seg(30 downto 24)
     );
+    
+    seg(31) <= '1';
+    seg(23) <= '1';
+    seg(15) <= '1';
+    seg(7)  <= '1';
     
 end architecture;
