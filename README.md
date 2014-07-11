@@ -1,12 +1,8 @@
 <h1>Dresden VHDL</h1>
-<br></br>
-
 <p>Lectures and Labs by Dr. Thomas Preusser from TUD.</p>
 <p>Open access to labs and lectures.</p>
-<br></br>
 <p>Summer school dates: 30 June - 11 July.</p>
 <p>These lectures and labs are property of Thomas Preusser.</p>
-
 <ul>  
   <li>Lab 1 "Hello world! with concurrency"</li>
   <li>Lab 2 "Signals and Combinational Logic"</li>
