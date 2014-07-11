@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity Calculator is  
 port(
     clk_50, clk_kb, data_kb  :   IN  std_ulogic;
-    seg :   OUT std_ulogic_vector(31 downto 0);
+    seg :   OUT std_ulogic_vector(31 downto 0)
 );
 end entity;
 
@@ -17,16 +17,23 @@ architecture behave of Calculator is
     signal  key_scan_code   :   std_logic_vector(7 downto 0);
     signal  key_extended, key_released, key_strobe  :   std_logic := '0';
     -- state machine
-    type    cState      is  (sSignInput, sInput, sCalculate, sErase);
+    type    cState      is  (sSignInput, sInput, sCalculate, sOutput);
     signal  state       :   cState  :=  sInput;
     -- calculator stuff
-    signal  tmp         :   unsigned(9 downto 0) :=  (others => '0');
+    signal  tmp         :   signed(20 downto 0) :=  (others => '0');    -- up to 1'000'000 with sign
+    signal  tmpi        :   signed(41 downto 0) :=  (others => '0');    -- OMG: really?
     signal  arg1        :   signed(10 downto 0) :=  (others => '0');
     signal  arg2        :   signed(10 downto 0) :=  (others => '0');
     signal  sign        :   std_logic           :=  '0';
-    signal  operand     :   std_logic           :=  '0';
-    type    oType       is  (addition, subtraction, multiplying, division);
-    signal  operation   :   oType;
+    signal  valid       :   std_logic           :=  '0';
+    -- current displayable number
+    signal  current_num :   unsigned(9 downto 0):=  (others => '0');
+    -- calculator's internal states
+    type    oType       is  (addition, subtraction, multiplying, division, none);
+    signal  operation1  :   oType   :=  none;
+    signal  operation2  :   oType   :=  none;
+    type    cStep       is  (operand1, operand2, calculation);
+    signal  calc        :   cStep   :=  operand1;
 begin
     
     ps2_byte_stream :   entity  work.ps2bytestream
@@ -49,10 +56,11 @@ begin
         strobe_out	=>  key_strobe
     );
     
-    converter_sys   :   entity  work.Conveter
+    converter_sys   :   entity  work.Converter
     port map(
         clk     =>  clk_50,
-        number  =>  result,
+        number  =>  current_num,
+        valid   =>  valid,
         sign    =>  sign,
         seg     =>  seg
     );
@@ -68,7 +76,7 @@ begin
                                 when x"7B"  =>  sign   <= '1';
                                 when others =>  sign   <= '0';
                             end case;
-                            result  <=  0;
+                            tmp     <=  (others => '0');
                             state   <=  sInput;
                         end if;
                     end if;
@@ -76,55 +84,101 @@ begin
                     if key_strobe = '1' then
                         if key_released = '0' then
                             case key_scan_code is 
-                                when x"70" =>   result <= result * 10; 
-                                when x"69" =>   result <= result * 10 + 1;
-                                when x"72" =>   result <= result * 10 + 2;
-                                when x"7A" =>   result <= result * 10 + 3;
-                                when x"6B" =>   result <= result * 10 + 4;
-                                when x"73" =>   result <= result * 10 + 5;
-                                when x"74" =>   result <= result * 10 + 6;
-                                when x"6C" =>   result <= result * 10 + 7;
-                                when x"75" =>   result <= result * 10 + 8;
-                                when x"7D" =>   result <= result * 10 + 9;
+                                when x"70" =>   tmpi <= tmp * 10; 
+                                when x"69" =>   tmpi <= tmp * 10 + 1;
+                                when x"72" =>   tmpi <= tmp * 10 + 2;
+                                when x"7A" =>   tmpi <= tmp * 10 + 3;
+                                when x"6B" =>   tmpi <= tmp * 10 + 4;
+                                when x"73" =>   tmpi <= tmp * 10 + 5;
+                                when x"74" =>   tmpi <= tmp * 10 + 6;
+                                when x"6C" =>   tmpi <= tmp * 10 + 7;
+                                when x"75" =>   tmpi <= tmp * 10 + 8;
+                                when x"7D" =>   tmpi <= tmp * 10 + 9;
                                 when x"5A" =>   -- Enter
-                                    if key_extended then
+                                    if key_extended = '1' then
+                                        operation1  <= operation2;
                                         state       <= sCalculate;
                                     end if;
                                 when x"79" =>   -- Plus 
-                                    operation   <= addition;
+                                    operation1  <= operation2;
+                                    operation2  <= addition;
                                     state       <= sCalculate; 
                                 when x"7B" =>   -- Minus
-                                    operation   <= subtraction;
+                                    operation1  <= operation2;
+                                    operation2  <= subtraction;
                                     state       <= sCalculate; 
                                 when x"7C" =>   -- Asterisk
-                                    operation   <= multiplying;
+                                    operation1  <= operation2;
+                                    operation2  <= multiplying;
                                     state       <= sCalculate;
                                 when x"4A" =>   -- Division (aka slash)
-                                    if key_extended then
-                                        operation   <= division;
+                                    if key_extended = '1' then
+                                        operation1  <= operation2;
+                                        operation2  <= division;
                                         state       <= sCalculate;
                                     end if;
                                 when x"71" =>   -- Dot (aka 'period', aka 'Del')
-                                    state       <= sErase;
+                                    tmpi    <= (others => '0');
+                                    tmp     <= (others => '0');
+                                    arg1    <= (others => '0');
+                                    arg2    <= (others => '0');
+                                    sign    <= '0';
+                                    state   <= sSignInput;
+                                    operation1  <= none;
+                                    operation2  <= none;
                                 when others =>
                                     null;
-                            end case;   -- case scan code
-                        end if;         -- key pressed
-                    end if;             -- key strobe = 1
+                                
+                                -- validate input
+                                if tmpi < -999 or tmpi > 999 then
+                                    valid <= '0';
+                                else
+                                    valid <= '1';
+                                    tmp         <= tmpi(20 downto 0);
+                                    current_num <= unsigned( tmpi(9 downto 0) );
+                                end if;         -- is tmp valid? [-999; 999]
+                            end case;           -- case 'scan code'                           
+                        end if;                 -- key pressed
+                    end if;                     -- key strobe = 1
                 when sCalculate =>
-                    if operand = '0' then
-                        arg1(10)            <= sign;
-                        arg1(9 downto 0)    <= tmp(9 downto 0);
-                        operand             <= '1';
-                        state               <= sSignInput;
+                    case calc is
+                        when operand1 =>
+                            arg1(10)            <= sign;
+                            arg1(9 downto 0)    <= tmp(9 downto 0);
+                            calc                <= operand2;
+                            state               <= sSignInput;
+                        when operand2 =>
+                            arg2(10)            <= sign;
+                            arg2(9 downto 0)    <= tmp(9 downto 0);
+                            calc                <= calculation;
+                        when calculation =>
+                            case operation1 is
+                                when addition       =>
+                                    tmp(10 downto 0) <=  arg1 + arg2;
+                                when subtraction    =>
+                                    tmp(10 downto 0) <=  arg1 - arg2;
+                                when multiplying    =>
+                                    tmp <=  resize(arg1 * arg2, 21);
+                                when division       =>  
+                                    tmp(10 downto 0) <=  arg1 / arg2;   
+                                when none =>
+                                    state   <= sInput;
+                            end case;
+                            state   <=  sOutput;
+                    end case;   -- case 'calc'
+                when    sOutput =>                    
+                    -- validate output
+                    if tmp < -999 or tmp > 999 then
+                        valid <= '0';
                     else
-                        
+                        valid <= '1';
+                        current_num <=  unsigned( tmp(9 downto 0) );
+                        sign        <=  tmp(20);
+                        calc        <=  operand1;
+                        state       <=  sSignInput;
                     end if;
-                when sErase =>
-                    result  <= 0;
-                    state   <= sInput;
-            end case;
-        end if;
+            end case;           -- case 'state'
+        end if;                 -- rising edge 'clk'
     end process;
 
-end bahave;
+end architecture;

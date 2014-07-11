@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity Segment is
 port(
@@ -11,16 +12,16 @@ end entity Segment;
 architecture behave of Segment is
 begin
     with i select
-        o   <=  "1000000" when 0,   --0
-                "1111001" when 1,	--1
-                "0100100" when 2,	--2
-                "0110000" when 3,	--3
-                "0011001" when 4,	--4
-                "0010010" when 5,	--5
-                "0000010" when 6,	--6
-                "1111000" when 7,	--7
-                "0000000" when 8,	--8
-                "0010000" when 9,	--9
-                "0111111" when 10,  --'-'
+        o   <=  "1000000" when x"0",    --0
+                "1111001" when x"1",	--1
+                "0100100" when x"2",	--2
+                "0110000" when x"3",	--3
+                "0011001" when x"4",	--4
+                "0010010" when x"5",	--5
+                "0000010" when x"6",	--6
+                "1111000" when x"7",	--7
+                "0000000" when x"8",	--8
+                "0010000" when x"9",	--9
+                "0111111" when x"A",    --'-'
                 "1111111" when others;
 end architecture behave;
