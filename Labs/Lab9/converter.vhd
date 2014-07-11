@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity Converter is    
 port(
-    --clk     :   IN std_ulogic;    
+    clk     :   IN std_ulogic;    
     i       :   IN  signed(10 downto 0);          -- 0 to 1023 plus sign bit
     seg0    :   OUT std_ulogic_vector(7 downto 0);
     seg1    :   OUT std_ulogic_vector(7 downto 0);
@@ -14,52 +14,88 @@ port(
 end entity;
 
 architecture behave of Converter is
-    signal  n0, n1, n2  :   unsigned(3 downto 0)    := 0;
-    signal  s           :   unsigned(3 downto 0)    := "1111";
+    type    cState      is  (Rec, Mult, Add, Output);
+    signal  state       :   cState                  := Rec;
+    signal  n0, n1, n2  :   unsigned(3 downto 0)    := x"0";
+    signal  c0, c1, c2, c3  :   std_ulogic          := '0';
+    signal  s           :   unsigned(3 downto 0)    := x"F";
+    signal  reg         :   unsigned(9 downto 0)    := x"0";
 begin
-    converter_sys   :   process(bin)
-        constant    PLUS    :   unsigned(3 downto )     := "1111";
-        constant    MINUS   :   unsigned(3 downto )     := "1010";
-        variable    num0, num1, num2    :   unsigned(4 downto 0)    := 0;
-        variable    car0, car1, car2    :   std_ulogic              := '0';
-        variable    reg     :   unsigned(9 downto 0)    := 0;
+    process(clk)
     begin
-        if i > 999 | i < -999 then  -- undisplayable number
-            num0    <=  MINUS;
-            num1    <=  MINUS;
-            num2    <=  MINUS;
-            sign    <=  MINUS;
-        else
-            if  i(10) = '0' then    -- sign determing
-                sign    :=  PLUS;
-            else
-                sign    :=  MINUS;
-            end if;
-            
-            reg :=  i(9 downto 0);
-            for k in 0 to 9 loop
-                if num0 > 4 then    -- 5 .. 9
-                    car0    := '1';
-                    num0    :=  num0 * 2 - 10;
-                else
-                    num0    :=  num0;
-                end if;
-                
-                if num1 > 4 then    -- 5 .. 9
-                    car1    := '1';
-                    num1    :=  num1 * 2 - 10;
-                else
-                    num1    :=  num1;
-                end if;
-                
-                if num2 > 4 then    -- 5 .. 9
-                    car2    := '1';
-                    num2    :=  num2 * 2 - 10;
-                else
-                    num2    :=  num2;
-                end if;
-                
-            end loop;
+        if rising_edge(clk) then
+            case state is
+                when Rec  =>
+                    reg <=  i(9 downto 0);
+                    n0  <=  x"0";
+                    n1  <=  x"0";
+                    n2  <=  x"0";
+                    c0  <=  '0';
+                    c1  <=  '0';
+                    c2  <=  '0';
+                    c3  <=  '0';
+                    
+                    if reg(10) = '1' then
+                        s   <=  x"A";   -- minus
+                    else
+                        s   <=  x"F";   -- plus
+                    end if;                    
+                    state   <=  Mult;
+                    
+                when Mult =>
+                    if reg = 0 then
+                        state   <=  Output;
+                    else
+                        c0      <=  reg(9);
+                        reg(9)  <=  reg(8 downto 0) & '0';  -- shifting
+                        
+                        if n0 > 4 and n0 < 10 then
+                            c1  <=  '1';    -- carry
+                            n0  <=  (n0 - 5) * 2;
+                        else
+                            c1  <=  '0';
+                            n0  <=  n0 * 2;
+                        end if;                        
+                        
+                        if n1 > 4 and n1 < 10 then
+                            c2  <=  '1';    -- carry
+                            n1  <=  (n1 - 5) * 2;
+                        else
+                            c2  <=  '0';
+                            n1  <=  n1 * 2;
+                        end if;                        
+                        
+                        if n2 > 4 and n2 < 10 then
+                            c3  <=  '1';    -- carry
+                            n2  <=  (n2 - 5) * 2;
+                        else
+                            c3  <=  '0';
+                            n2  <=  n2 * 2;
+                        end if;
+                        
+                        state   <=  Add;
+                    end if;
+                    
+                when Add    =>                
+                    if c3 = '1' then    -- incorrect output, number is too big
+                        n0  <= x"A";      -- minus sign
+                        n1  <= x"A";      -- minus sign
+                        n2  <= x"A";      -- minus sign
+                        s   <= x"A";      -- minus sign
+                        state   <=  Rec;
+                    else
+                        if c0 = '1' then
+                            n0  <= n0 + 1;
+                        end if;
+                        if c1 = '1' then
+                            n1  <= n1 + 1;
+                        end if;
+                        if c2 = '1' then
+                            n2  <= n2 + 1;
+                        end if;
+                        state   <=  Mult;
+                    end if;
+            end case;
         end if;
     end process;
     
